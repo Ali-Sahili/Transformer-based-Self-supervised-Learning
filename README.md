@@ -31,6 +31,7 @@ The experiments were performed using Python 3.8.5 with the following Python pack
 │
 ├─ model/                
 │  ├─ layers.py              <- some modules to build the whole model
+│  ├─ transformer.py         <- implementation of a ViT class
 │  └─ network.py             <- SiT architecture
 │
 ├─ utils.py                  <- Utility functions and classes
