@@ -1,5 +1,5 @@
 # Transformer-based-Self-supervised-Learning
-Pytorch implementation of several transformer-based networks which learn in a self-supervised manner.
+Pytorch implementation of two transformer-based networks which learn in a self-supervised manner.
 
 ![](SSL.gif)
 
@@ -17,9 +17,6 @@ For more details, see [here](https://towardsdatascience.com/self-supervised-lear
 ├─ DINO/                     <- Implementation of self-DIstillation with NO labels
 │  └─ ...      
 │
-├─ EsViT/                    <- Implementation of Efficient self-supervised Vision Transformer
-│  └─ ...      
-│
 ├─ SSL.gif          
 └─ README.md
 ```
@@ -29,4 +26,4 @@ For more details, see [here](https://towardsdatascience.com/self-supervised-lear
 ## References
 1. [SiT: Self-supervised vIsion Transformer](https://arxiv.org/abs/2104.03602)
 2. [Emerging Properties in Self-Supervised Vision Transformers](https://arxiv.org/abs/2104.14294)
-3. [Efficient Self-supervised Vision Transformers for Representation Learning](https://arxiv.org/abs/2106.09785)
+<!-- 3. [Efficient Self-supervised Vision Transformers for Representation Learning](https://arxiv.org/abs/2106.09785) -->
