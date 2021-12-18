@@ -19,10 +19,9 @@ from losses import MTL_loss
 from train import train_SSL, train_finetune
 from eval import evaluate_SSL, evaluate_finetune
 
-from utils import collate_fn, requires_grad
-from model.network import VisionTransformer_SiT
+from model.network import *
 from datasets.prepare_data import build_dataset
-
+from utils import collate_fn, requires_grad, str2bool
 
 
 # Setting Parameters
@@ -57,6 +56,7 @@ def get_args_parser():
     
     # Model parameters
     parser.add_argument('--input_size', default=224, type=int, help='images input size')
+    parser.add_argument('--net', default=True, type=str2bool, help='Choose an implementation')
 
     # Optimizer parameters
     parser.add_argument('--opt', default='adamw', type=str, help='Optimizer')
@@ -163,9 +163,12 @@ def main(args):
     
     # Defining model
     print("Creating model...")
-    model = VisionTransformer_SiT(img_size=args.input_size, patch_size=16, in_chans=3, 
-                                  num_classes=num_classes, representation_size=None, 
-                                  distilled=False, training_mode=args.training_mode)
+    if args.net:
+        model = SiT(img_size=args.input_size, patch_size=16, in_chans=3,   
+                     num_classes=num_classes, training_mode=args.training_mode)
+    else:            
+        model = SiT_2(image_size=args.input_size, patch_size=16, in_channels=3, 
+                      num_classes=num_classes, training_mode = args.training_mode)
     model.to(device)
     
     # Number of parameters

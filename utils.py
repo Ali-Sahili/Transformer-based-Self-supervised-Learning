@@ -4,6 +4,11 @@ import datetime
 from collections import defaultdict, deque
 
 
+def str2bool(v):
+    """ For arguments parser """
+    return v.lower() in ("yes", "true", "t", "1")
+
+
 # For dataloading
 def collate_fn(batch):
     batch = list(filter(lambda x: x is not None, batch))
