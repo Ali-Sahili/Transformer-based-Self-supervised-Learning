@@ -9,8 +9,11 @@ Pytorch implementation of several transformer-based networks which learn in a se
 
 ```
 .
-├─ SiT/                      <- Implementation of Self-supervised Vision Transformer
-│  └─ ...        
+├─ SiT/                      <- Implementation of Self-supervised vIsion Transformer
+│  └─ ...   
+│
+├─ DINO/                      <- Implementation of self-DIstillation with NO labels
+│  └─ ...      
 │
 ├─ SSL.gif          
 └─ README.md
@@ -20,3 +23,4 @@ Pytorch implementation of several transformer-based networks which learn in a se
 
 ## References
 1. [SiT: Self-supervised vIsion Transformer](https://arxiv.org/abs/2104.03602)
+2. [Emerging Properties in Self-Supervised Vision Transformers](https://arxiv.org/abs/2104.14294)
